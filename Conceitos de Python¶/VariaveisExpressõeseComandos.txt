@@ -1,0 +1,119 @@
+'''Variáveis e tipos de dados'''
+
+Strings em Python podem ser delimitados por apóstrofos (') aspas ("), ou três de cada (''' ou """)
+
+    print(type('Esse e um string.') )
+    print(type("E esse tambem eh um string.") )
+    print(type("""e esse.""") )
+    print(type('''e mesmo esse...''') )
+    
+Strings delimitados por três aspas ou apóstrofos são chamadas de strings triplos (triple quoted strings). 
+Eles podem conter aspas, apóstrofos ou strings entre aspas ou apóstrofos:
+
+    print('''"Oh nao", exclamou ela, "A bicleta esta quebrada!"''')
+    >>> "Oh nao", exclamou ela, "A bicleta esta quebrada!"
+    
+------------------------------------------------------------------------------------------------------------------------
+
+'''Funções de Conversão de Valores'''
+
+    São denominadas as funções de Conversão de VAlores, aquelas que server para converter um tipo de dado para o outro,
+    temos para inteiros, float e strings.
+
+    Inteiros:
+        usa-se a sintaxe int(valor)
+        - quando temos um dado do tipo ponto flutuante (float) e o convertemos usando int(), o dado é convertido
+          ao valor mais próximo de zero, chama-se 'trucamento para zero'. exemplo:
+          print(int(7.999))
+          >>> 7
+          print(int(-6.22))
+          >>> -6
+
+    Float:
+        usa-se a sintaxe float(valor)
+
+    String:
+        usa-se a sintaxe str(valor)
+        - o valor retornado não virá com aspas, mas podemos verificar sempre com a função type()
+        exemoplo:
+        print(str("22.55"))
+        >>> 22.55
+        print(type(str("22.55")))
+        >>> <class 'str'>
+
+------------------------------------------------------------------------------------------------------------------------
+
+'''Variáveis'''
+
+        uma variável é um 'lugar' que receberá um valor, o qual pode receber difentes valores de diferentes tipos a
+        qualquer momento, ou seja, ela é sempre variável.
+
+            para atribuir um valor a uma variável usa-se o sinal de igualdade '=', no entando, não estamos igualando
+            ela, mas apenas atribuindo. Igualar é algo permanente, atribuir é variável.
+            por exemplo: a = 7 (estou atribuindo o valor 7 à variável 'a')
+                         a = 'meu nome é julio' (agora estou atribuindo o valor 'meu nome é julio' à variável 'a')
+                         a =  True (e denovo estou atribuindo o valor True) obs: True é dado do tipo Booleano, em python
+                              valores booleanos são ditos como a classe 'bool', que têm dois valores: True ou False,
+                              que são sempre escritos com a primeira letra maiúscula.
+
+            Se printarmos a variável 'a', veremos o valor 'True' como resposta. O que indica que ela só guardou o
+            último valor atribuido a ela. Portanto, uma variável sempre guarda o último valor atribuido a ela.
+
+------------------------------------------------------------------------------------------------------------------------
+
+'''Operadores Aritiméticos'''
+
+Temos os operadores que são iguais ao que vemos na matemática;
+    somar -> +
+    substrair -> -
+    multiplicar -> *
+    dividir -> /
+    exponeciar -> **
+
+Para a divisão temos mais ferramentas interessantes;
+
+    para operações aonde esperamos e usaremos valores do tipo Float;
+        usa-se o sinal /
+        exemplo: 3/2
+                >>> 1.5
+
+    para operações aonde só precisamos do valor inteiro;
+        usa-se o sinal //
+        exemplo: 3//2
+                >>> 1
+
+    Quando queremos saber o respo de uma divisão, e nesse contexto normalmente é divisão por inteiro;
+        usa-se o sinal %
+        exemplo: 8%3
+                >>> 2
+
+exemplo: função que converte segundo em horas:
+
+    valorEmSegundos = 600
+    segundosParaMinutos = valorEmSegundos//60
+    restoSegundosParaMinutos = valorEmSegundos%60
+    minutosParaHoras = segundosParaMinutos//60
+    restoMinutosParaHoras =  segundosParaMinutos%60
+    valorFormatado = str(minutosParaHoras) + 'h' + str(restoMinutosParaHoras) + 'min' + str(restoSegundosParaMinutos) + 'seg'
+
+    #ou resumindo:
+    valorFormatado = str(valorEmSegundos//3600)+ 'h' + str((valorEmSegundos%3600)//60) + 'min' + str(((valorEmSegundos%3600)%60)) + 'seg'
+
+A ordem de prioridade nas expressões algébricas seguem as da matemática "da esquerda pra direita" "exponenciação tem prioridade",
+ etc.... No entanto, somente a exponênciação é executada da direita pra esquerda
+
+ então: 2**2**3 é 256 e não 64, porque o computador lê assim: 2**(2**3) -> 2**8 -> 256
+
+
+ """Reatribuição de variáveis"""
+
+ a = 5
+ b = a
+ print(a,b)
+ >>> 5 5
+ a = 7
+ print(a,b)
+ >>> 7 5
+
+
+ 
