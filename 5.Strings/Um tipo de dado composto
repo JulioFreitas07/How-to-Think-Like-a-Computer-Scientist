@@ -1,0 +1,84 @@
+'''um tipo de dado composto'''
+
+diferente dos tipos primitivos de dados, int, float e bool, as Strings são dados compostos. Isso porque os dados
+primitivos são unitários e não podem ser desmembrados, eles são um só. Diferente da String que pode ser desmembradas,
+fatiada e decomposta.
+
+Em strings temos o dado vazio e dado em branco. O dado vazio normalmente é  representado assim : "", e dependendo da
+linguagem ele pode não ocupar espaço em memória, mas via de regra ele ocupa espaço sim, por menor que seja. O que é
+diferente da string em branco que é representada normalmente assim " ", a qual ocupa espaço tal como um caractere comum.
+
+alguns operadores matemáticos funcionam com Stringgs, esses são: + e *.
+    +: contena, exemplo: a = "eu"
+                         b = "ela"
+                         c = a + b
+                         print(c)
+                         >>> euela
+    *: repete, exemplo: a: eu
+                        print(a*3)
+                        >>> eueueu
+
+'''percorrendo Strings por índice'''
+
+podemos percorrer strings e selecionar caracteres delas usando indice no colchete
+exemplo:
+            codigo = "BRAU1568"
+            print(codigo[2])
+            >>> A
+
+esses indices começam com zero e podemos selecionar a partir do ultimo caractere da String utilizando o sinal de negativo.
+Mas nesse caso, indo de trás para frente, começamos do indice -1
+exemplo:
+            codigo = "BRAU1568"
+            print(codigo[-1])
+            >>> 8
+
+codigo = "Eu quero MUITO ficar bom em Python, essa é a minha meta!!!1"
+print(codigo.find("A"))
+print(codigo.count("o"))
+print(codigo.upper())
+print(codigo.lower())
+print(codigo.index("quero"))
+print(codigo.split(" "))
+print(codigo.split(" "))
+print(codigo[:])
+
+Cada caractere corresponde a um valor em inteiro, nesse sentido, conseguimos usar operadores relacionais '==', '!=', '<='
+, '>=' etc
+
+por exemplo:
+                def sameWords(word, otherword):
+                    if word == otherword:
+                        print("both are the same")
+                    else:
+                        print("there's different words")
+
+o python diferencia as letras minusculas de maiusculas, e cada letra tem um valor inteiro correspondente,
+podemos descobrir o valor inteiro de cada caractere pelo comando ord("letra")
+
+
+strings são imutáveis, ou seja, não consigo substituir o caractere indice de uma variável por outro,
+exemplo:
+            conversa = "Hello Dear!"
+            conversa[0] = "B"
+            print(conversa)
+            _____________________________
+            o certo seria
+            conversa = "Hello Dear!"
+            novaConversa = "Y" + conversa[1:]
+            print(novaConversa)
+
+            ou seja, usando  fatiamento.
+
+varredura de for por item dentro de uma string:
+
+    reverseBilbor = ""
+    aluno = "bilbowbegnins"
+    for inx in range(len(aluno)-1, -1, -1): #no start, mesmo que esteja passando o mesmo caractere do stop, por estar passando
+                                            #via len() é como se ele entedesse que é outro índice, e mesmo que tenda a ir a
+                                            #indice zero pelo fato do step ser -1, a condição de stop -1 ocorrerá porque
+                                            #após o valor descrescer até 0, ele retorna até a posição -1.
+        reverseBilbor = reverseBilbor + aluno[inx]
+
+    print(reverseBilbor)
+

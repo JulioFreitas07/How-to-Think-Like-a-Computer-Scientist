@@ -1,0 +1,117 @@
+'''Valores em uma lista'''
+
+um lista pode ter valores de tipos diferentes, e até mesmo outras listas dentro dela mesma. Quando temos outras listas
+dentro de um lista, dizemos que é uma lista aninhada, no inglês isso chama-se nested list. E as listas que temos dentro
+deste Nested List são chamadas de sublistas, ou sublist no inglês.
+
+podemos atribuir listas a uma variável.
+
+    nomes = ['julio', 'marco', 'forest', 'gump']
+
+    alturas = [1.72, 1.76, 1.88, 1.92]
+
+    nova_lista = nomes, alturas
+
+    print(nova_lista)
+    >>> nova_lista = (['julio', 'marco', 'forest', 'gump'], [1.72, 1.76, 1.88, 1.92]) #obs: nesse caso o que temos é uma
+                                                                                            tupla
+
+    no caso acima obtivemos uma tupla, se quiséssemos outra lista, deveriámos codar nova_lista = [nomes, alturas]
+
+Também podemos concatenar listas utilizando o sinal de +
+
+
+    nomes = ['julio', 'marco', 'forest', 'gump']
+
+    alturas = [1.72, 1.76, 1.88, 1.92]
+
+    nova_lista = nomes + alturas
+
+    print(nova_lista)
+    >>> nova_lista = ['julio', 'marco', 'forest', 'gump', 1.72, 1.76, 1.88, 1.92]
+    #quando concatenamos listas nós obtemos um tipo lista, diferente do caso acima que o resultado é uma tupla
+
+o comprimente de uma lista são os elementos que estão contidos nela, sublistas contam como 1 elemento só, para acessar
+as sublistas nós temos que acessar antes o indice da lista que corresponde a essa sublista, e daí em diante podemos
+acessar as informações dessa sublista. Exemplos:
+
+    alturas = [1.72, [1.76, 1.88], 1.92]
+
+    print(1.76 in alturas[1])
+    >>> True
+
+    print(len(alturas[1]))
+    >>>2
+
+Além disso, podemos também realizar repetições usando o *, mas somente por números inteiros
+    exemplo: musica = ['comer', 'comer']
+             print(musica*2)
+             >>> ['comer', 'comer','comer', 'comer']
+
+
+Ao contrário das Strings, Lista são mutáveis, posso por exemplo pegar o indice 2 da lista salada = ['alface', 'tomate',
+'cebola', 'alecrim', 'marjericão'], e substitur por tomilho, em salada[2] = 'tomilho'. E quando eu der print na lista
+salada, vou receber; salada = ['alface', 'tomate', 'tomilho', 'alecrim', 'marjericão']
+
+além disso, posso usar o fatiamento também, assim como eu uso em Strings, e posso atrelar ele à reatribuição de elementos
+de uma lista:
+
+            jogos_play_2 = ['bom de guerra', 'grande tráfico de carros', 'mario bros', 'will smith o retorno do will']
+            print(jogos_play_2)
+            jogos_play_2[2:4] = ['O Hobbit', 'senhor dos aneis']
+            print(jogos_play_2)
+
+Para deletar um elemento de uma lista, o Python oferece a função del, que uma alternativa mais adequada do que simplesmente
+substituir a posição do elemento da lista
+
+listas não fazem referência a mesmo objeto, mesmo que sejam iguais:
+
+julio = ["21 anos", "1.72m", "março"]
+pedro = ["21 anos", "1.72m", "março"]
+
+print(julio == pedro)
+>>>True
+print(julio is pedro)
+>>>False
+
+print(id(julio))
+>>>140494426689344
+print(id(pedro))
+>>>140494426641792
+
+Porém, se eu atribuir julio à pedro, ambas terão o mesmo id e farão refência ao mesmo espaço de memória.
+exemplo:
+            julio=pedro
+
+            print(julio == pedro)
+            >>>True
+            print(julio is pedro)
+            >>>True
+
+            print(id(julio))
+            >>>140494426689344
+            print(id(pedro))
+            >>>140494426641792
+
+perceba que a lista julio recebeu todos os elementos da lista pedro, e portanto, se eu alterar algo na lista pedro,
+tendo em vista que ambas então referenciadas umas a outras, a alteração também ocorrerá em julio.
+
+podemos também clonar listas, conforme o exemplo abaixo:
+
+    a = [1,2,2]
+    b = a[:]
+
+    print(a == b)
+    >>>True
+    print(a is b)
+    >>>False
+
+    para clonar, basta atribuir da forma acima, ou também poderia ser: b = a*1, ou seja, se na atribuição houver alguma
+    operação, já é considerada cópia, e não refência ao mesmo espaço de memória
+
+    É importante notar que append, sort, e reverse retornam None. Isto significa que atribuir a minha_lista o resultado
+    da ordenação de minha_lista resultará na perda da lista.
+
+    Quando eu tenho uma cópia de b em a: Se eu alterar algum elemento de b, não haverá alterações em a. Se eu alterar
+    algum elemento em a, terei a alteração também em b
+

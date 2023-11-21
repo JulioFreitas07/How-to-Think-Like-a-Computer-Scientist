@@ -1,0 +1,39 @@
+'''Módulos e Obtendo Ajuda'''
+
+    um módulo nada mais é do que um arquivo que contém um programa em Python, o qual nós chamamos quando fazemos
+    a importação desse arquivo. Ao importar podemos então usar os métodos que temos dentro desse arquivo.
+
+   No site da documentação do python tem todas as bibliotecas que são feitas
+
+'''Mais sobre o uso de módulos'''
+
+    Quando importamos um módulo, por exemplo "import turtle" estamos criando um novo objeto do tipo module,
+    o qual iremos chamar posteriormente para usar alguma classe dentro desse módulo.
+        exemplo: em turtle.Turtle estamos dizendo " dentro do módulo turtle, acesse o elemento Python chamado Turtle".
+
+'''Módulo math'''
+
+    para usar esse módulo temos que importar o math: import math
+
+    nele não precisamos instanciar a classe, apenas chamadas a funções usando math.função
+
+    algumas das funções mais usadas:
+        math.pi: retornar o valor de pi
+        math.sqrt(x): retorna a raiz quadrada do número x.
+        math.pow(x, y): retorna a valor de x elevado a y
+        qualquer operação matemática podemos encontrar em math. Olhar documentação para sabr mais.
+
+'''Módulo Random'''
+
+    usado para gerar números aleatórios, pode ser útil em simulações e criptografias
+
+    algumas funções:
+    random.random(): gera o dado float inclusivo 0 até exclusivo 1, pode ser usado como uma probabilidade
+    random.randrange(x, y): gera o dado int inclusivo x até exclusivo y
+
+    observação: random gera para a gente dados pseudo-aleatórios, pois seu algoritmo é determinista, ou seja
+    a partir de um dado ('semente') o algoritmo vai atualizar esse dado ('semente'). Ou sejja, se alguém tiver
+    acesso ao algoritmo, consegue prever o próximo dado('semente')
+
+
+

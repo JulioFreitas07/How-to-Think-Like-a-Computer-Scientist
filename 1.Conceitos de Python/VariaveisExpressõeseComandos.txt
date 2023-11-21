@@ -17,7 +17,7 @@ Eles podem conter aspas, apóstrofos ou strings entre aspas ou apóstrofos:
 
 '''Funções de Conversão de Valores'''
 
-    São denominadas as funções de Conversão de VAlores, aquelas que server para converter um tipo de dado para o outro,
+    São denominadas as funções de Conversão de Valores, aquelas que servem para converter um tipo de dado para o outro,
     temos para inteiros, float e strings.
 
     Inteiros:
@@ -82,7 +82,7 @@ Para a divisão temos mais ferramentas interessantes;
         exemplo: 3//2
                 >>> 1
 
-    Quando queremos saber o respo de uma divisão, e nesse contexto normalmente é divisão por inteiro;
+    Quando queremos saber o resto de uma divisão, e nesse contexto normalmente é divisão por inteiro;
         usa-se o sinal %
         exemplo: 8%3
                 >>> 2

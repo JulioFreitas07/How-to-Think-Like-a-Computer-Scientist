@@ -1,0 +1,33 @@
+'''Functions Revisited'''
+
+    Para facilitar no processo de desenvolvimento, e também com a finalidade de tornar a função mais inteligível e assertiva,
+    usa-se a técnica de decomposição incremental, na qual primeiro é desenvolvido o corpo da função, e pouco a pouco adiciona-se
+    as linhas de códigos, estágio por estágio.
+
+    Exemplo: def hipotenusa(x, y):
+                return 0.0
+
+             def hipotenusa(x, y):
+                dx = x**2
+                dy = y**2
+                hip = dx + dy
+                return hip
+
+             def hipotenusa(x, y):
+                dx = x**2
+                dy = x**2
+                hip = dx + dy
+                hipFinal = hip**0.5
+                return hipFinal
+
+'''Funções Booleanas'''
+
+    São funções que retornam True ou False, o condicional if é pode ser exemplo disso, pos é ele é por natureza um booleando.
+    por exemplo:
+                 a condição: if a > 4:
+                                ...
+                             else:
+                                ...
+                 por natureza já é: if a > 4 == True
+
+operadores relacionais têm maior prioridade que os operadores lógicos

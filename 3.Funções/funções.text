@@ -1,0 +1,96 @@
+'''Funções'''
+
+    São blocos que incluem uma resolução de problema
+    Sintaxe:
+        def NOMEDAFUNÇÃO ():
+            dentro dos parênteses vai o que chamamos de parâmetros formais, os quais são necessários para a execução,
+            da função. Quando essa função é chamada pelo usuário, ele então passará esses parâmetros, que agora,
+            são chamados de parâmetros reais ou argumentos.
+
+    Usa-se o que chamamos de docstrings, são as definições do que a função faz. Ela sempre será a primeira linha
+    abaixo da função.
+    Sintaxe:
+        def NOMEDAFUNÇÃO ():
+        ''' Essa função retorna etc etc etc'''
+
+    Funções que retornar algum valor são chamadas de funções frutíferas e funções que não retornam nenhum valor são
+    chamadas de funções não frutíferas.
+
+    No caso, quando uma função retorna algo, ela termina com 'return':
+        exemplo -> def elevarADois(numero):
+                        valorfinal = numero**2
+                        return valor final
+
+
+    Q-20: O que está errado com a seguinte definição de função:
+
+    def somaEm(x, y, z):
+        return x+y+z
+        print('a resposta é', x+y+z)
+
+    Você não deveria ter nenhum comando na função depois do comando return.
+    Uma vez que o comando return é atingido, a execução da função para imediatamente.
+
+    Uma variável criada dentro de uma função, é uma variável local, ou seja, ela não pode ser acessada fora da função,
+    e variáveis locais não podem alterar variáveis globais.
+
+'''acumulador'''
+    usado no laço para acumular os valores que ocorrem por cada repetição
+    exemplo:
+
+            $import random
+            $
+            $def testeSorte(x):
+            $    '''função que vai verificar a sorte de acordo com o número de vezes que foi rodada a sorte'''
+            $
+            $    print("Seu número de jogadas é", x, "Vamos  ver qual é a sua maior sorte!")
+            $
+            $    acumuladorDeSorte = []
+            $    for i in range(x):
+            $        acumuladorDeSorte.append(random.random())
+            $
+            $    print(acumuladorDeSorte)
+            $    print("Sua maior sorte foi o número:", max(acumuladorDeSorte))
+            $
+            $
+            $perguntaDado = input("Você deseja jogar o dado? Y/n?")
+            $
+            $resultadoDado = random.randrange(1, 7)
+            $
+            $if perguntaDado == "Y" or "y":
+            $
+            $      testeSorte(resultadoDado)
+            $else:
+            $    print("Tudo bem! Vamos deixar para uma próxima...")
+
+'''Pensando como cientista da computação ao criar funções'''
+
+    Ao criar funções é bom ter duas coisas em mente:
+        decomposição e generalização:
+        Isto é, decompor um problema com pequenas resoluções com funções e aproveitar funções para chamar outras funções.
+
+        Teste seu entendimento
+
+        Q-39: Considere o seguinte código em Python. Observe que os números das linhas estão incluídos à esquerda.
+
+        1      def pot(b, p):
+        2          y = b ** p
+        3          return y
+        4
+        5      def quadrado(x):
+        6          a = pot(x, 2)
+        7          return a
+        8
+        9      n = 5
+        10     resultado = quadrado(n)
+        11     print(resultado)
+        Quais os passos que refletem a ordem em que as linhas de código são processadas em Python?
+
+        A. 1, 5, 9, 10, 6, 2, 3, 7, 11
+        explicação: Python começa na linha 1, percebe que é uma definição de função e pula todas as linhas da definição
+        da função até ele encontrar uma linha que não está incluída na função (linha 5). Ele então percebe que a linha 5
+        também é uma definição de função e pula novamente o corpo da função até a linha 9. Na linha 10 ele percebe que
+        tem que executar uma função, logo ele volta e executa o corpo da função. Observe que aquela função inclui outra
+        chamada de função. Finalmente, ele voltará para a linha 11 depois da função quadrado terminar.
+
+'''  '''

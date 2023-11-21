@@ -1,0 +1,51 @@
+'''while, for'''
+
+while é considero uma iteração indefinada, porque ele depende que dentro do corpo dele, em algum momento retorne False,
+para que ele seja encerrado e o código continue. No caso do for é diferente, a iteração é definida pois vai percorrer
+uma lista ou range já definidos.
+
+
+Exemplo de while:
+
+    def sequeciaTresNMaisUm(n):
+        '''A sequência 3n + 1'''
+
+
+        while n != 1:
+            if n % 2 == 0:
+                n = n//2
+                print(n)
+            else:
+                n = 3*n + 1
+                print(n)
+
+        resposta = 'laço finalizado'
+        print(resposta)
+
+
+    print(sequeciaTresNMaisUm(10))
+
+'''operador \t'''
+
+no python temos o operdaor \t oo qual é usado para gerar informações em forma de tabela no prompt
+
+exemplo deuso:
+
+    print("x", '\t    ', "x + 1")
+    print("---", '\t', "-----")
+
+    for i in range(10):
+        print(i, '\t    ', i+1)
+
+    >>> x 	     x + 1
+        --- 	 -----
+        0 	     1
+        1 	     2
+        2 	     3
+        3 	     4
+        4 	     5
+        5 	     6
+        6 	     7
+        7 	     8
+        8 	     9
+        9 	     10
